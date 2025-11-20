@@ -14,7 +14,7 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    // Captura erros de Entidade Não Encontrada e RuntimeException genéricas 
+    // Captura erros de Entidade Não Encontrada e RuntimeException genéricas
     @ExceptionHandler({EntityNotFoundException.class, RuntimeException.class})
     public ResponseEntity<Map<String, String>> handleNotFound(RuntimeException ex) {
         Map<String, String> error = new HashMap<>();
